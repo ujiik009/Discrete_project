@@ -1,0 +1,296 @@
+<form action="">
+    <div class="white-panel pn" style="min-height: 300px; height: auto;">
+        <div class="white-header" style="background-color: #ffe082">
+          <h2>INVERSE MATRIX</h2>
+        </div>
+         <!-- matrix A 3*3 -->
+         <table style="display: inline; width: 358px;color: black;" border="0">
+          <colgroup>
+          <col style="width: 92px">
+          <col style="width: 20px">
+          <col style="width: 50px">
+          <col style="width: 50px">
+          <col style="width: 50px">
+          <col style="width: 73px">
+          </colgroup>
+            <tr>
+              <th></th>
+              <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+              <th><input id="A11"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></th>
+              <th><input id="A12"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></th>
+              <th><input id="A13"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></th>
+              <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+            </tr>
+            <tr>
+              <td><h1>A</h1></td>
+              <td><input id="A21"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+              <td><input id="A22"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+              <td><input id="A23"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input id="A31"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+              <td><input id="A32"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+               <td><input id="A33"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+            </tr>
+          </table>
+
+
+          <!-- matrix B 3*3 -->
+         <table style="display: inline; width: 358px;color: black;" border="0">
+          <colgroup>
+          <col style="width: 92px">
+          <col style="width: 20px">
+          <col style="width: 50px">
+          <col style="width: 50px">
+          <col style="width: 50px">
+          <col style="width: 73px">
+          </colgroup>
+            <tr>
+              <th></th>
+              <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+              <th><input id="B11"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></th>
+              <th><input id="B12"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></th>
+              <th><input id="B13"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></th>
+              <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+            </tr>
+            <tr>
+              <td><h1>B</h1></td>
+              <td><input id="B21"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+              <td><input id="B22"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+              <td><input id="B23"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input id="B31"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+              <td><input id="B32"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+               <td><input id="B33"  class="form-control" required="" pattern="[\d.-]+" title="number only" ></td>
+            </tr>
+          </table>
+          <!-- matrix B 3*3 -->
+
+          <!-- matrix A-1 3*3 -->
+         <table style="display: inline; width: 358px;color: black;" border="0">
+          <colgroup>
+          <col style="width: 92px">
+          <col style="width: 20px">
+          <col style="width: 100px">
+          <col style="width: 100px">
+          <col style="width: 100px">
+          <col style="width: 73px">
+          </colgroup>
+            <tr>
+              <th></th>
+              <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+              <th><p id="A-111"></p></th>
+              <th><p id="A-112"></p></th>
+              <th><p id="A-113"></p></th>
+              <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+            </tr>
+            <tr>
+              <td><h1>A<sup>-1</sup></h1></td>
+              <td><p id="A-121"></p></td>
+              <td><p id="A-122"></p></td>
+              <td><p id="A-123"></p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><p id="A-131"></p></td>
+              <td><p id="A-132"></p></td>
+               <td><p id="A-133"></p></td>
+            </tr>
+          </table>
+          <!-- matrix A-1 3*3 -->
+
+           <!-- matrix B-1 3*3 -->
+         <table style="display: inline; width: 358px;color: black;" border="0">
+          <colgroup>
+          <col style="width: 92px">
+          <col style="width: 20px">
+          <col style="width: 100px">
+          <col style="width: 100px">
+          <col style="width: 100px">
+          <col style="width: 73px">
+          </colgroup>
+            <tr>
+              <th></th>
+              <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+              <th><p id="B-111"></p></th>
+              <th><p id="B-112"></p></th>
+              <th><p id="B-113"></p></th>
+              <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+            </tr>
+            <tr>
+              <td><h1>B<sup>-1</sup></h1></td>
+              <td><p id="B-121"></p></td>
+              <td><p id="B-122"></p></td>
+              <td><p id="B-123"></p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><p id="B-131"></p></td>
+              <td><p id="B-132"></p></td>
+               <td><p id="B-133"></p></td>
+            </tr>
+          </table>
+          <!-- matrix B-1 3*3 -->
+
+
+<button type="submit" style="display: none;">ok222</button>
+
+    </div>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+
+  $("p[id]").css({'text-align':'center','font-size':'20px'});
+    // Returns the inverse of matrix `M`.
+function matrix_invert(M){
+    // I use Guassian Elimination to calculate the inverse:
+    // (1) 'augment' the matrix (left) by the identity (on the right)
+    // (2) Turn the matrix on the left into the identity by elemetry row ops
+    // (3) The matrix on the right is the inverse (was the identity matrix)
+    // There are 3 elemtary row ops: (I combine b and c in my code)
+    // (a) Swap 2 rows
+    // (b) Multiply a row by a scalar
+    // (c) Add 2 rows
+    
+    //ตรวจสอบว่าเป็น matrix จัตุรัส หรือไม่
+    if(M.length !== M[0].length){return;}
+    
+    //create the identity matrix (I), and a copy (C) of the original
+    var i=0, ii=0, j=0, dim=M.length, e=0, t=0;
+    var I = [], C = [];
+    for(i=0; i<dim; i+=1){
+        // Create the row
+        I[I.length]=[];
+        C[C.length]=[];
+        for(j=0; j<dim; j+=1){
+            
+            //if we're on the diagonal, put a 1 (for identity)
+            if(i==j){ I[i][j] = 1; }
+            else{ I[i][j] = 0; }
+            
+            // Also, make the copy of the original
+            C[i][j] = M[i][j];
+        }
+    }
+    
+    // Perform elementary row operations
+    for(i=0; i<dim; i+=1){
+        // get the element e on the diagonal
+        e = C[i][i];
+        
+        // if we have a 0 on the diagonal (we'll need to swap with a lower row)
+        if(e==0){
+            //look through every row below the i'th row
+            for(ii=i+1; ii<dim; ii+=1){
+                //if the ii'th row has a non-0 in the i'th col
+                if(C[ii][i] != 0){
+                    //it would make the diagonal have a non-0 so swap it
+                    for(j=0; j<dim; j++){
+                        e = C[i][j];       //temp store i'th row
+                        C[i][j] = C[ii][j];//replace i'th row by ii'th
+                        C[ii][j] = e;      //repace ii'th by temp
+                        e = I[i][j];       //temp store i'th row
+                        I[i][j] = I[ii][j];//replace i'th row by ii'th
+                        I[ii][j] = e;      //repace ii'th by temp
+                    }
+                    //don't bother checking other rows since we've swapped
+                    break;
+                }
+            }
+            //get the new diagonal
+            e = C[i][i];
+            //if it's still 0, not invertable (error)
+            if(e==0){return}
+        }
+        
+        // Scale this row down by e (so we have a 1 on the diagonal)
+        for(j=0; j<dim; j++){
+            C[i][j] = C[i][j]/e; //apply to original matrix
+            I[i][j] = I[i][j]/e; //apply to identity
+        }
+        
+        // Subtract this row (scaled appropriately for each row) from ALL of
+        // the other rows so that there will be 0's in this column in the
+        // rows above and below this one
+        for(ii=0; ii<dim; ii++){
+            // Only apply to other rows (we want a 1 on the diagonal)
+            if(ii==i){continue;}
+            
+            // We want to change this element to 0
+            e = C[ii][i];
+            
+            // Subtract (the row above(or below) scaled by e) from (the
+            // current row) but start at the i'th column and assume all the
+            // stuff left of diagonal is 0 (which it should be if we made this
+            // algorithm correctly)
+            for(j=0; j<dim; j++){
+                C[ii][j] -= e*C[i][j]; //apply to original matrix
+                I[ii][j] -= e*I[i][j]; //apply to identity
+            }
+        }
+    }
+    
+    //we've done all operations, C should be the identity
+    //matrix I should be the inverse:
+    return I;
+}
+
+
+ function outputinverse(arrayInv,matrixName){
+      var arrarloca = ["11","12","13","21","22","23","31","32","33"];
+      
+      var count = 0;
+      $.each(arrayInv, function(index, arrayD2) {
+         
+         $.each(arrayD2, function(index, val) {
+           //console.log("#"+matrixName+"-1"+count);
+           $("#"+matrixName+"-1"+arrarloca[count]).html(val);
+           count++;
+         });
+      });
+
+    }
+
+ $("form").submit(function(event) {
+    var A11 = parseInt($("#A11").val());
+    var A12 = parseInt($("#A12").val());
+    var A13 = parseInt($("#A13").val());
+    var A21 = parseInt($("#A21").val());
+    var A22 = parseInt($("#A22").val());
+    var A23 = parseInt($("#A23").val());
+    var A31 = parseInt($("#A31").val());
+    var A32 = parseInt($("#A32").val());
+    var A33 = parseInt($("#A33").val());
+
+    var B11 = parseInt($("#B11").val());
+    var B12 = parseInt($("#B12").val());
+    var B13 = parseInt($("#B13").val());
+    var B21 = parseInt($("#B21").val());
+    var B22 = parseInt($("#B22").val());
+    var B23 = parseInt($("#B23").val());
+    var B31 = parseInt($("#B31").val());
+    var B32 = parseInt($("#B32").val());
+    var B33 = parseInt($("#B33").val());
+
+    var matrixA =[
+        [A11,A12,A13],
+        [A21,A22,A23],
+        [A31,A32,A33]
+    ];
+    var matrixB =[
+        [B11,B12,B13],
+        [B21,B22,B23],
+        [B31,B32,B33]
+    ];
+
+
+
+outputinverse(matrix_invert(matrixA),"A");
+outputinverse(matrix_invert(matrixB),"B");
+  
+ });
+});
+</script>

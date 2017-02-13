@@ -1,0 +1,194 @@
+ <form action="#">
+    <div class="white-panel pn" style="min-height: 300px; height: auto;">
+        <div class="white-header" style="background-color: #ffe082">
+          <h2>MATRIX MULTIPLICATION</h2>
+        </div>
+        <div class="centered">
+           <!--  mateix A 2*3 -->
+            <table style="display: inline; width: 390px;color: black;" border="0">
+              <colgroup>
+              <col style="width: 87px">
+              <col style="width: 20px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 70px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1>A</h1></th>
+                  <th rowspan="2"><h1 style="font-size: 80px;">[</h1></th>
+                  <th><input id="A11" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th><input id="A12" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th><input id="A13" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th rowspan="2"><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><input id="A21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                  <td><input id="A22" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                  <td><input id="A23" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                </tr>
+              </table>
+              <!--  mateix A 2*3 -->
+
+              <!-- matrix B 3*2 -->
+
+              <table style="display: inline; width: 358px;color: black;" border="0">
+                <colgroup>
+                <col style="width: 92px">
+                <col style="width: 20px">
+                <col style="width: 50px">
+                <col style="width: 50px">
+                <col style="width: 73px">
+                </colgroup>
+                  <tr>
+                    <th></th>
+                    <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+                    <th><input id="B11" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                    <th><input id="B12" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                    <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+                  </tr>
+                  <tr>
+                    <td><h1>B</h1></td>
+                    <td><input id="B21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                    <td><input id="B22" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><input id="B31" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                    <td><input id="B32" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                  </tr>
+                </table>
+                <!-- matrix B 3*2 -->
+                 <button type="submit" style="display: none;">ok</button>
+
+
+                  <!-- output mateix A 2*3 -->
+            <table style="display: inline; width: 390px;color: black;" border="0">
+              <colgroup>
+              <col style="width: 87px">
+              <col style="width: 20px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 70px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1>A</h1></th>
+                  <th rowspan="2"><h1 style="font-size: 80px;">[</h1></th>
+                  <th><p id="outputA11"></p></th>
+                  <th><p id="outputA12"></p></th>
+                  <th><p id="outputA13"></p></th>
+                  <th rowspan="2"><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><p id="outputA21"></p></td>
+                  <td><p id="outputA22"></p></td>
+                  <td><p id="outputA23"></p></td>
+                </tr>
+              </table>
+              <!--  output mateix A 2*3 -->
+
+              <!-- output matrix B 3*2 -->
+
+              <table style="display: inline; width: 358px;color: black;" border="0">
+                <colgroup>
+                <col style="width: 92px">
+                <col style="width: 20px">
+                <col style="width: 50px">
+                <col style="width: 50px">
+                <col style="width: 73px">
+                </colgroup>
+                  <tr>
+                    <th></th>
+                    <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+                    <th><p id="outputB11"></p></th>
+                    <th><p id="outputB12"></p></th>
+                    <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+                  </tr>
+                  <tr>
+                    <td><h1>B</h1></td>
+                    <td><p id="outputB21"></p></td>
+                    <td><p id="outputB22"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><p id="outputB31"></p></td>
+                    <td><p id="outputB32"></p></td>
+                  </tr>
+                </table>
+                <!-- output matrix B 3*2 -->
+
+                <!-- out AB -->
+                <table style="display: inline; width: 358px;color: black;" border="0">
+                <colgroup>
+                <col style="width: 92px">
+                <col style="width: 20px">
+                <col style="width: 50px">
+                <col style="width: 50px">
+                <col style="width: 73px">
+                </colgroup>
+                  <tr>
+                    <th></th>
+                    <th rowspan="2"><h1 style="font-size:120px;">[</h1></th>
+                    <th><p id="outputAB11"></p></th>
+                    <th><p id="outputAB12"></p></th>
+                    <th rowspan="2"><h1 style="font-size:120px;">]</h1></th>
+                  </tr>
+                  <tr>
+                    <td><h1>AB = </h1></td>
+                    <td><p id="outputAB21"></p></td>
+                    <td><p id="outputAB22"></p></td>
+                  </tr>
+                  
+                </table>
+                <!-- out AB -->
+
+
+        </div>
+        
+    </div>
+    
+</form>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("[id^='out']").css({
+       "text-align": 'center',
+       "font-size": '25px'
+    });
+    $("input").keyup(function(event) {
+     //alert($(this).attr("id"));
+     var loca = $(this).attr("id");
+     $("#output"+loca).html($(this).val());
+
+    });
+
+    $("form").submit(function(event) {
+      // matrix A
+      var A11 = Number($("#A11").val());
+      var A12 = Number($("#A12").val());
+      var A13 = Number($("#A13").val());
+      var A21 = Number($("#A21").val());
+      var A22 = Number($("#A22").val());
+      var A23 = Number($("#A23").val());
+      // matrix A
+      var B11 = Number($("#B11").val());
+      var B12 = Number($("#B12").val());
+      var B21 = Number($("#B21").val());
+      var B22 = Number($("#B22").val());
+      var B31 = Number($("#B31").val());
+      var B32 = Number($("#B32").val());
+      // matrix B
+
+      var AB11 =(A11*B11)+(A12*B21)+(A13*B31);
+      var AB12 =(A11*B12)+(A12*B22)+(A13*B32);
+      var AB21 =(A21*B11)+(A22*B21)+(A23*B31);
+      var AB22 =(A21*B12)+(A22*B22)+(A23*B32);
+      var value_array = {"AB11":AB11,"AB12":AB12,"AB21":AB21,"AB22":AB22}
+      $.each(value_array, function(index, val) {
+         $("#output"+index).html(val);
+      });
+    });
+
+
+  });
+</script>

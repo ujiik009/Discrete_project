@@ -1,0 +1,162 @@
+<form action="">
+    <div class="white-panel pn" style="min-height: 300px; height: auto;">
+        <div class="white-header" style="background-color: #ffe082">
+          <h2>ADDING MATRIX</h2>
+        </div>
+        
+
+          <!-- matrix A -->
+          <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+            <colgroup>
+            <col style="width: 100px">
+            <col style="width: 40px">
+            <col style="width: 80px">
+            <col style="width: 80px">
+            <col style="width: 40px">
+            </colgroup>
+              <tr>
+                <th rowspan="2"><h1 style="text-align: center;">A =</h1></th>
+                <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                <th><input id="A11" loca="11" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                <th><input id="A12" loca="12" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+              </tr>
+              <tr>
+                <td><input id="A21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                <td><input id="A22" loca="22" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+              </tr>
+            </table>
+            <!-- matrix A -->
+
+            <!-- matrix B -->
+             <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+              <colgroup>
+              <col style="width: 100px">
+              <col style="width: 40px">
+              <col style="width: 80px">
+              <col style="width: 80px">
+              <col style="width: 40px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1 style="text-align: center;">B =</h1></th>
+                  <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                  <th><input id="B11" loca="11" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th><input id="B12" loca="12" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><input id="B21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                  <td><input id="B22" loca="22" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                </tr>
+              </table>
+              <button type="submit" style="display: none;">ok</button>
+            <!-- matrix B -->
+          
+
+
+           <!--  output -->
+
+
+            <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+            <colgroup>
+            <col style="width: 100px">
+            <col style="width: 40px">
+            <col style="width: 80px">
+            <col style="width: 80px">
+            <col style="width: 40px">
+            </colgroup>
+              <tr>
+                <th rowspan="2"><h1 style="text-align: center;">A =</h1></th>
+                <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                <th><p id="outputA11"></p></th>
+                <th><p id="outputA12"></p></th>
+                <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+              </tr>
+              <tr>
+                <td><p id="outputA21"></p></td>
+                <td><p id="outputA22"></p></td>
+              </tr>
+            </table>
+            <!-- matrix A -->
+
+            <!-- matrix B -->
+             <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+              <colgroup>
+              <col style="width: 100px">
+              <col style="width: 40px">
+              <col style="width: 80px">
+              <col style="width: 80px">
+              <col style="width: 40px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1 style="text-align: center;">B =</h1></th>
+                  <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                  <th><p id="outputB11"></p></th>
+                  <th><p id="outputB12"></p></th>
+                  <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><p id="outputB21"></p></td>
+                  <td><p id="outputB22"></p></td>
+                </tr>
+              </table>
+              <!--  output -->
+              <center>
+                 <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+                  <colgroup>
+                  <col style="width: 100px">
+                  <col style="width: 40px">
+                  <col style="width: 80px">
+                  <col style="width: 80px">
+                  <col style="width: 40px">
+                  </colgroup>
+                    <tr>
+                      <th rowspan="2"><h1 style="text-align: center;">A+B =</h1></th>
+                      <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                      <th><p id="outputApB11"></p></th>
+                      <th><p id="outputApB12"></p></th>
+                      <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+                    </tr>
+                    <tr>
+                      <td><p id="outputApB21"></p></td>
+                      <td><p id="outputApB22"></p></td>
+                    </tr>
+                  </table>
+
+              </center>
+
+
+
+
+    </div>
+    
+</form>
+<script type="text/javascript">
+  $(document).ready(function () {
+   //$("[id^='out']").css('text-align', 'center');
+   $("[id^='out']").css({
+       "text-align": 'center',
+       "font-size": '25px'
+    });
+    $("input").keyup(function(event) {
+      var loca = $(this).attr('id');
+      $("#output"+loca).html($(this).val());
+    });
+    $("form").submit(function(event) {
+      var loca = ["11","12","21","22"];
+      $.each(loca, function(index, ij) {
+        var sum = 0;
+        var data =  $("input[id$='"+ij+"']");
+          $.each(data, function(index, val) {
+             sum+=Number($(val).val());       
+          }); 
+          $("#outputApB"+ij).html(sum);
+      });
+      
+      
+    });
+
+
+
+  });
+</script>

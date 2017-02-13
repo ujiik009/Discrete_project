@@ -1,0 +1,134 @@
+<form action="">
+    <div class="white-panel pn" style="min-height: 300px; height: auto;">
+        <div class="white-header" style="background-color: #ffe082">
+          <h2>MATRIX TRANSPOSE</h2>
+        </div>
+        <!-- matrix a 3*2 -->
+         <table style="display: inline; width: 358px;color: black;" border="0">
+          <colgroup>
+          <col style="width: 92px">
+          <col style="width: 20px">
+          <col style="width: 50px">
+          <col style="width: 50px">
+          <col style="width: 73px">
+          </colgroup>
+            <tr>
+              <th></th>
+              <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+              <th><input id="A11" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+              <th><input id="A12" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+              <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+            </tr>
+            <tr>
+              <td><h1>A</h1></td>
+              <td><input id="A21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+              <td><input id="A22" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input id="A31" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+              <td><input id="A32" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+            </tr>
+          </table>
+          <!-- matrix a 3*2 -->
+
+         <!--  matrix b 3*2 -->
+          <table style="display: inline; width: 358px;color: black;" border="0">
+            <colgroup>
+            <col style="width: 92px">
+            <col style="width: 20px">
+            <col style="width: 50px">
+            <col style="width: 50px">
+            <col style="width: 73px">
+            </colgroup>
+              <tr>
+                <th></th>
+                <th rowspan="3"><h1 style="font-size:120px;">[</h1></th>
+                <th><input id="B11" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                <th><input id="B12" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                <th rowspan="3"><h1 style="font-size:120px;">]</h1></th>
+              </tr>
+              <tr>
+                <td><h1>B</h1></td>
+                <td><input id="B21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                <td><input id="B22" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input id="B31" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                <td><input id="B32" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+              </tr>
+            </table>
+         <!--  matrix b 3*2 -->
+
+
+         <!--  matrix tranpose A -->
+            <table style="display: inline; width: 390px;color: black;" border="0">
+              <colgroup>
+              <col style="width: 87px">
+              <col style="width: 20px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 70px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1>A<sup>t</sup></h1></th>
+                  <th rowspan="2"><h1 style="font-size: 80px;">[</h1></th>
+                  <th><p id="TA11"></p></th>
+                  <th><p id="TA21"></p></th>
+                  <th><p id="TA31"></p></th>
+                  <th rowspan="2"><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><p id="TA12"></p></td>
+                  <td><p id="TA22"></p></td>
+                  <td><p id="TA32"></p></td>
+                </tr>
+              </table>
+
+         <!--  matrix tranpose A -->
+
+           <!--  matrix tranpose B -->
+            <table style="display: inline; width: 390px;color: black;" border="0">
+              <colgroup>
+              <col style="width: 87px">
+              <col style="width: 20px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 55px">
+              <col style="width: 70px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1>B<sup>t</sup></h1></th>
+                  <th rowspan="2"><h1 style="font-size: 80px;">[</h1></th>
+                  <th><p id="TB11"></p></th>
+                  <th><p id="TB21"></p></th>
+                  <th><p id="TB31"></p></th>
+                  <th rowspan="2"><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><p id="TB12"></p></td>
+                  <td><p id="TB22"></p></td>
+                  <td><p id="TB32"></p></td>
+                </tr>
+              </table>
+
+         <!--  matrix tranpose B -->
+    </div>
+</form>
+<script type="text/javascript">
+  $(document).ready(function() {
+     $("[id^='T']").css({
+       "text-align": 'center',
+       "font-size": '25px'
+    });
+    $("input").keyup(function(event) {
+      var loca = $(this).attr('id');
+      $("#T"+loca).html($(this).val());
+    });
+  });
+
+
+
+</script>

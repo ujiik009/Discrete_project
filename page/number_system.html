@@ -1,0 +1,80 @@
+ <form action="#">
+    <div class="white-panel pn" style="min-height: 300px; height: auto;">
+        <div class="white-header" style="background-color: #ffe082">
+          <h2>NUMBER SYSTEM</h2>
+        </div>
+        <div class="centered">
+            <div class="row">
+              <div class="col-sm-2 col-xs-2">
+               
+              </div>
+              <div class="col-sm-6 col-xs-6">
+                <input class="form-control" id="input_number" pattern="[0-1\.]{1,}" title="Please enter the number 0 or 1." placeholder="Please enter the number 0 or 1." required="">
+                
+              </div>
+              <div class="col-sm-2 col-xs-2">
+                <select class="form-control" id="base">
+                  <option value='{"base":2,"pattern":"[0-1\\.]{1,}","text":"Please enter the number 0 or 1."}'>2</option>
+                  <option value='{"base":8,"pattern":"[0-7\\.]{1,}","text":"Please enter a number between 0 and 7."}'>8</option>
+                  <option value='{"base":10,"pattern":"[0-9\\.]{1,}","text":"Please enter a number between 0 and 9."}'>10</option>
+                  <option value='{"base":16,"pattern":"[0-9A-Fa-f\\.]{1,}","text":"Please enter a number between 0-9 and A-F."}'>16</option>
+                </select>
+              </div>
+              <div class="col-sm-2 col-xs-2">
+              
+              </div>
+            </div>
+            <p>
+              <button class="btn btn-round btn-success" id="conv">CONVERT</button>
+            </p>
+           
+            <ul class="list-group output" style="font-size: 50px; color: #ff865c">
+              
+            </ul>
+        </div>
+        
+    </div>
+    
+</form>
+  <script type="application/javascript">
+        $(document).ready(function () {
+
+           $("#base").change(function(event) {
+              var str_json = $(this).val();
+              var set_json = jQuery.parseJSON(str_json);
+              
+              $("#input_number").attr({
+                pattern: set_json.pattern,
+                title: set_json.text,
+                placeholder: set_json.text
+              });
+
+           });
+        });
+        
+        
+       $("form").submit(function(event) {
+           var base_json = $("#base").val();
+           var set_json = jQuery.parseJSON(base_json);
+           var base = set_json.base;
+           var number_input = $("#input_number").val();
+           var array_base = [2,8,10,16]; 
+           var data = ""; 
+            //console.log(base+" "+number_input);
+             $(".output").empty();
+
+            $.each(array_base,function(index, base_to) {
+                if(base_to != base){
+                    //console.log(el);
+                    
+                    $(".output").prepend("<li>"+number_input+"<sub>"+base+"</sub> = "+Base(base,base_to, number_input)+"<sub>"+base_to+"</sub></li>");
+                    data+= number_input+"<sub>"+base+"</sub> = "+Base(base,base_to, number_input)+"<sub>"+base_to+"</sub><br>";
+                }
+            });
+            alert(Date())
+            add_history(get_date_dmy(),data);
+            
+
+           //console.log( Base(2, 10, 11111111));
+       });
+    </script>

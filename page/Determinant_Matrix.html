@@ -1,0 +1,79 @@
+<form action="">
+    <div class="white-panel pn" style="min-height: 300px; height: auto;">
+        <div class="white-header" style="background-color: #ffe082">
+          <h2>DETERMINANT MATRIX</h2>
+        </div>
+       <!-- matrix A -->
+          <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+            <colgroup>
+            <col style="width: 100px">
+            <col style="width: 40px">
+            <col style="width: 80px">
+            <col style="width: 80px">
+            <col style="width: 40px">
+            </colgroup>
+              <tr>
+                <th rowspan="2"><h1 style="text-align: center;">A =</h1></th>
+                <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                <th><input id="A11" loca="11" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                <th><input id="A12" loca="12" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+              </tr>
+              <tr>
+                <td><input id="A21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                <td><input id="A22" loca="22" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+              </tr>
+            </table>
+            <!-- matrix A -->
+
+            <!-- matrix B -->
+             <table style=" width: 400px; color: black; display: inline-block;" border="0" >
+              <colgroup>
+              <col style="width: 100px">
+              <col style="width: 40px">
+              <col style="width: 80px">
+              <col style="width: 80px">
+              <col style="width: 40px">
+              </colgroup>
+                <tr>
+                  <th rowspan="2"><h1 style="text-align: center;">B =</h1></th>
+                  <th rowspan="2" ><h1 style="font-size: 80px; text-align: right;">[</h1></th>
+                  <th><input id="B11" loca="11" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th><input id="B12" loca="12" class="form-control" required="" pattern="[\d.]+" title="number only" ></th>
+                  <th rowspan="2" ><h1 style="font-size: 80px">]</h1></th>
+                </tr>
+                <tr>
+                  <td><input id="B21" loca="21" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                  <td><input id="B22" loca="22" class="form-control" required="" pattern="[\d.]+" title="number only" ></td>
+                </tr>
+              </table>
+
+        <div style="display: inline; font-size: 40px;color: black" class="row">
+         det A = <p id="detA"> </p>
+         det B = <p id="detB"> </p>
+        </div>
+        <!-- matrix b -->
+    </div>
+    <button type="submit" style="display: none;">ok</button>
+</form>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $("p[id^='det']").css('display', 'inline');
+      function det(matrixName){
+        var name_matrix = matrixName;
+        var M11 = Number($("#"+name_matrix+"11").val());
+        var M12 = Number($("#"+name_matrix+"12").val());
+        var M21 = Number($("#"+name_matrix+"21").val());
+        var M22 = Number($("#"+name_matrix+"22").val());
+        var det = M11*M22-M21*M12;
+        return det;
+      }
+
+      $("form").submit(function(event) {
+         $("#detA").html(det("A"));
+         $("#detB").html(det("B"));
+      });
+
+
+  });
+</script>
