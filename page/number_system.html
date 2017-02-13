@@ -60,12 +60,12 @@
            var number_input = $("#input_number").val();
            var array_base = [2,8,10,16]; 
            var data = ""; 
-            //console.log(base+" "+number_input);
+            
              $(".output").empty();
 
             $.each(array_base,function(index, base_to) {
                 if(base_to != base){
-                    //console.log(el);
+                  
                     
                     $(".output").prepend("<li>"+number_input+"<sub>"+base+"</sub> = "+Base(base,base_to, number_input)+"<sub>"+base_to+"</sub></li>");
                     data+= number_input+"<sub>"+base+"</sub> = "+Base(base,base_to, number_input)+"<sub>"+base_to+"</sub><br>";
@@ -75,6 +75,6 @@
             add_history(get_date_dmy(),data);
             
 
-           //console.log( Base(2, 10, 11111111));
+           
        });
     </script>
